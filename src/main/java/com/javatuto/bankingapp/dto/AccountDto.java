@@ -1,15 +1,7 @@
 package com.javatuto.bankingapp.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
 
-@AllArgsConstructor
-@Data
-public class AccountDto {
 
-    private Long id;
-
-    private String accountHolderName;
-
-    private double balance;
-}
+@Builder
+public record AccountDto(Long id, String accountHolderName, double balance) {}
